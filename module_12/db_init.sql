@@ -62,7 +62,7 @@ INSERT INTO book(book_name, author, details)
     VALUES('Romeo and Juliet', 'William Shakespeare', 'A love tragedy');
 
 INSERT INTO book(book_name, author, details)
-    VALUES('Pride and Prejudice', 'Jane Austen', 'A trubulent love story');
+    VALUES('Pride and Prejudice', 'Jane Austen', 'A turbulent love story');
 
 INSERT INTO book(book_name, author, details)
     VALUES('The Adventures of Sherlock Holmes', 'Arthur Conan Doyle', 'Superb English Detective');
