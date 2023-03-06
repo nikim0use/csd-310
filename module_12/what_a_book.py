@@ -58,7 +58,7 @@ def validate_user():
     #validate users ID
 
     try:
-        user_id = int(input('\n      Enter a customer id <Example 1 for user_id >: '))
+        user_id = int(input('\n      Enter a customer id <Example 1 for user_id 1>: '))
 
         if user_id < 0 or user_id > 3:
             print("\n  Invalid customer number, program terminated...\n")
