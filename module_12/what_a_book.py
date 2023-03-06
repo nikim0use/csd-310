@@ -33,23 +33,23 @@ def show_menu():
 
 def show_books(_cursor):
     # inner join query 
-    _cursor.execute("SELECT book_name, author, details from book")
+    _cursor.execute("SELECT book_id, book_name, author, details from book")
 
     # get results from the cursor object 
     books = _cursor.fetchall()
 
-    print("\n  -- DISPLAYING BOOK LISTING --")
+    print("\n  -- DISPLAYING AVAILABLE BOOKS --")
     
     # iterate over the data set and display the results 
     for book in books:
-        print("  Book Name: {}\n  Author: {}\n  Details: {}\n".format(book[0], book[1], book[2]))
+        print("  Book ID: {}\n  Book Name: {}\n  Author: {}\n  Details: {}\n".format(book[0], book[1], book[2], book[3]))
 
 def show_locations(_cursor):
     _cursor.execute("SELECT store_id, locale from store")
 
     locations = _cursor.fetchall()
 
-    print("\n  -- DISPLAYING STORE LOCATIONS --")
+    print("\n  -- DISPLAYING OUR STORE LOCATIONS --")
 
     for location in locations:
         print("  Locale: {}\n".format(location[1]))
@@ -58,7 +58,7 @@ def validate_user():
     #validate users ID
 
     try:
-        user_id = int(input('\n      Enter a customer id <Example 1 for user_id 1>: '))
+        user_id = int(input('\n      Enter a customer id <Example 1 for user_id >: '))
 
         if user_id < 0 or user_id > 3:
             print("\n  Invalid customer number, program terminated...\n")
@@ -206,3 +206,5 @@ finally:
     #close connection to MySQL
 
     db.close()
+
+#Adapted from Professor Krasso's Code
